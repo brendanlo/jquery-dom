@@ -73,8 +73,11 @@
   </div>
 </div>
 <script src="https://unpkg.com/jquery"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script>
-  // Add your code here!
+  $('article img').addClass('image-center');
+  $('article p').last().remove();
+  console.log($('article p').last());
 </script>
 </body>
 
