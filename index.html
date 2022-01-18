@@ -84,14 +84,22 @@
     $('aside').empty().append($('<p> Sorry for the list </p>'));
 
     //6
-    $('input').on('input', changeColor);
-
     function changeColor() {
-      let $red = $('input:nth-child(1)').val();
-      let $green = $('input:nth-child(2)').val();
-      let $blue = $('input:nth-child(3)').val();
-      $('body').css('background-color', `${$red}, ${$green}, ${$blue}`);
+      // let red = $('input:nth-child(1)').val();
+      // let green = $('input:nth-child(2)').val();
+      // let blue = $('input:nth-child(3)').val();
+
+      let red = $('.form-control').eq(0).val();
+      let green = $('.form-control').eq(1).val();
+      let blue = $('.form-control').eq(2).val();
+      console.log(`red: ${red}, green: ${green}, blue: ${blue}`);
+      $('body').css('background-color', `rgb(${red}, ${green}, ${blue})`);
     }
+
+    $('input').on('change', changeColor);
+
+
+
   </script>
 </body>
 
