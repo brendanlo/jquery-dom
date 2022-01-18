@@ -97,7 +97,11 @@
     }
 
     $('input').on('change', changeColor);
-
+    //7
+    $('article').on('click', 'img', deleteImage);
+    function deleteImage(){
+      $('img').remove();
+    }
 
 
   </script>
