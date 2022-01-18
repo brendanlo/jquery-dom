@@ -74,7 +74,7 @@
   <script>
     $('article img').addClass('image-center'); //1
     $('article p').last().remove(); //2
-    console.log($('article p').last());
+    // console.log($('article p').last());
     $('#title').css('font-size', Math.round(Math.random() * 100)); //3
 
     let $listContainer = $('ol');
@@ -83,7 +83,15 @@
     //5
     $('aside').empty().append($('<p> Sorry for the list </p>'));
 
+    //6
+    $('input').on('input', changeColor);
 
+    function changeColor() {
+      let $red = $('input:nth-child(1)').val();
+      let $green = $('input:nth-child(2)').val();
+      let $blue = $('input:nth-child(3)').val();
+      $('body').css('background-color', `${$red}, ${$green}, ${$blue}`);
+    }
   </script>
 </body>
 
